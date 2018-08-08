@@ -30,7 +30,7 @@ class EntityAIDropFeather(
 
 
     override fun shouldExecute(): Boolean {
-        return true
+        return !chicken.isChild
     }
 
     override fun resetTask() {
