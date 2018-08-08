@@ -25,7 +25,7 @@ class EntityAIDropFeather(
      *
      * 20 ticks equal 1 second. 12000 ticks equal 600 seconds. 600 Seconds equal 10 minutes.
      */
-    private val baseTicks: Int = 1000
+    private val baseTicks: Int = 12000
     private var timeUntilNextFeather: Int = getNewTime()
 
 
