@@ -27,7 +27,7 @@ object ChickenDropFeathersMod {
         meta.description = "Chicken will drop feathers from time to time."
         meta.version = VERSION
         meta.authorList = listOf("lalo5")
-        meta.url = "https://github.com/axelrindle/forge-chicken-drop-feathers"
+        meta.url = "https://minecraft.curseforge.com/projects/chicken-drop-feathers"
     }
 
     @EventHandler
