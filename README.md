@@ -1,4 +1,4 @@
-# chickendropfeathersmod
+# forge-chicken-drop-feathers
 
 > Chicken will drop feathers from time to time.
 
