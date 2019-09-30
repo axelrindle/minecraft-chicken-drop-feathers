@@ -1,7 +1,7 @@
 ---
 name: Version Request
 about: Request a new version the mod should be available for
-title: ''
+title: Version Request
 labels: version-request
 assignees: axelrindle
 
