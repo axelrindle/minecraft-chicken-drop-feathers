@@ -3,6 +3,7 @@ package de.axelrindle.chickendropfeathersmod;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -29,8 +30,9 @@ public class EntityAIDropFeather extends EntityAIBase {
     }
 
     @Override
-    public void updateTask() {
+    public void tick() {
         timeUntilNextFeather--;
+        System.out.println("Feathers in " + timeUntilNextFeather + " ticks...");
         if (timeUntilNextFeather <= 0) {
             dropFeather();
             resetTask();
@@ -57,6 +59,6 @@ public class EntityAIDropFeather extends EntityAIBase {
     }
 
     private void dropFeather() {
-        chicken.dropItem(Items.FEATHER, getFeatherAmount());
+        chicken.entityDropItem(new ItemStack(Items.FEATHER, getFeatherAmount()));
     }
 }
