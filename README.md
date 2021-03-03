@@ -1,4 +1,5 @@
 [![supported minecraft versions](http://cf.way2muchnoise.eu/versions/300374.svg)](https://www.curseforge.com/minecraft/mc-mods/chicken-drop-feathers)
+[![Build](https://github.com/axelrindle/forge-chicken-drop-feathers/actions/workflows/gradle.yml/badge.svg)](https://github.com/axelrindle/forge-chicken-drop-feathers/actions/workflows/gradle.yml)
 
 # forge-chicken-drop-feathers
 
