@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "chickendropfeathersmod",
+  "version": "${version}",
+
+  "name": "Chicken Drop Feathers Mod",
+  "description": "Chicken will drop feathers from time to time.",
+  "authors": [
+    "lalo5"
+  ],
+  "contact": {
+    "homepage": "https://github.com/axelrindle/minecraft-chicken-drop-feathers",
+    "sources": "https://github.com/axelrindle/minecraft-chicken-drop-feathers",
+    "issues": "https://github.com/axelrindle/minecraft-chicken-drop-feathers/issues"
+  },
+
+  "license": "AGPLv3",
+  "icon": "assets/chickendropfeathersmod/icon.png",
+
+  "environment": "*",
+  "mixins": [
+    "chickendropfeathersmod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  }
+}
