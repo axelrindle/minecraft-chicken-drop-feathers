@@ -1,3 +1,5 @@
+![banner](banner.svg)
+
 [![supported minecraft versions](http://cf.way2muchnoise.eu/versions/300374.svg)](https://www.curseforge.com/minecraft/mc-mods/chicken-drop-feathers)
 [![Build](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/gradle.yml/badge.svg)](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/gradle.yml)
 
@@ -6,6 +8,7 @@
 > Chicken will drop feathers from time to time.
 
 ## License
+
 ```text
 minecraft-chicken-drop-feathers
 Copyright (C) 2020 Axel Rindle
