@@ -1,13 +1,13 @@
 [![supported minecraft versions](http://cf.way2muchnoise.eu/versions/300374.svg)](https://www.curseforge.com/minecraft/mc-mods/chicken-drop-feathers)
-[![Build](https://github.com/axelrindle/forge-chicken-drop-feathers/actions/workflows/gradle.yml/badge.svg)](https://github.com/axelrindle/forge-chicken-drop-feathers/actions/workflows/gradle.yml)
+[![Build](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/gradle.yml/badge.svg)](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/gradle.yml)
 
-# forge-chicken-drop-feathers
+# minecraft-chicken-drop-feathers
 
 > Chicken will drop feathers from time to time.
 
 ## License
 ```text
-forge-chicken-drop-feathers
+minecraft-chicken-drop-feathers
 Copyright (C) 2020 Axel Rindle
 
 This program is free software: you can redistribute it and/or modify
