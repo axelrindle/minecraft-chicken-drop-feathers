@@ -9,7 +9,7 @@ modLoader="javafml" #mandatory
 loaderVersion="[35,)" #mandatory
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="GNU AGPL-3.0"
+license="AGPL-3.0"
 # A URL to refer people to when problems occur with this mod
 issueTrackerURL="https://github.com/axelrindle/forge-chicken-drop-feathers/issues" #optional
 # A list of mods - how many allowed here is determined by the individual mod loader
@@ -27,7 +27,7 @@ logoFile="logo.png" #optional
 # A text field displayed in the mod UI
 credits="Thanks to Mojang as well as the Forge and FML guys." #optional
 # A text field displayed in the mod UI
-authors="Axel Rindle" #optional
+authors="lalo5" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description="@DESCRIPTION@"
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
