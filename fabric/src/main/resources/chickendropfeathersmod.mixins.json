@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.axelrindle.chickendropfeathersmod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "EntityChickenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
