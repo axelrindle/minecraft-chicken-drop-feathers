@@ -40,7 +40,6 @@ public class EntityGoalDropFeather extends Goal {
             dropFeather();
             stop();
         }
-        System.out.println("Next feather in " + timeUntilNextFeather + " ticks.");
     }
 
     /**
