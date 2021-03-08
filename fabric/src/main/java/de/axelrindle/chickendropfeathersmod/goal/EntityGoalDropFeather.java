@@ -42,6 +42,14 @@ public class EntityGoalDropFeather extends Goal {
         }
     }
 
+    public int getTimeUntilNextFeather() {
+        return timeUntilNextFeather;
+    }
+
+    public void setTimeUntilNextFeather(int timeUntilNextFeather) {
+        this.timeUntilNextFeather = timeUntilNextFeather;
+    }
+
     /**
      * Returns a new tick delay until the next feather will be dropped.
      *
