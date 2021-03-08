@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "chickendropfeathersmod",
+  "id": "chickendropfeathers",
   "version": "${version}",
 
-  "name": "Chicken Drop Feathers Mod",
+  "name": "Chicken Drop Feathers",
   "description": "Chicken will drop feathers from time to time.",
   "authors": [
     "lalo5"
