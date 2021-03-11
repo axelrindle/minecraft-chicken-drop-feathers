@@ -4,6 +4,7 @@
   "package": "de.axelrindle.chickendropfeathersmod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "EntityChickenMixin"
   ],
   "client": [
     "EntityChickenMixin"
