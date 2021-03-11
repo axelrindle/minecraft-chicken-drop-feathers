@@ -6,9 +6,6 @@
   "mixins": [
     "EntityChickenMixin"
   ],
-  "client": [
-    "EntityChickenMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
   }
