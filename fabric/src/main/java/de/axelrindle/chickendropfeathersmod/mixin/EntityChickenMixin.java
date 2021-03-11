@@ -25,7 +25,7 @@ public class EntityChickenMixin extends AnimalEntity {
 	private EntityGoalDropFeather goal;
 
 	@Inject(at = @At("TAIL"), method = "initGoals")
-	private void initGoals(CallbackInfo info) throws NoSuchFieldException, IllegalAccessException {
+	private void initGoals(CallbackInfo info) {
 		ChickenEntity chicken = (ChickenEntity) (Object) this;
 		goal = new EntityGoalDropFeather(chicken);
 		this.goalSelector.add(8, goal);
@@ -45,6 +45,6 @@ public class EntityChickenMixin extends AnimalEntity {
 
 	@Override
 	public PassiveEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
-		return (ChickenEntity)EntityType.CHICKEN.create(serverWorld);
+		return EntityType.CHICKEN.create(serverWorld);
 	}
 }
