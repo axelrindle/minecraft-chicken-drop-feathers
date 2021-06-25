@@ -5,10 +5,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -31,13 +30,13 @@ public class EntityChickenMixin extends AnimalEntity {
 		this.goalSelector.add(8, goal);
 	}
 
-	@Inject(at = @At("TAIL"), method = "writeCustomDataToTag")
-	private void writeCustomDataToTag(CompoundTag tag, CallbackInfo info) {
+	@Inject(at = @At("TAIL"), method = "writeCustomDataToNbt")
+	private void writeCustomDataToTag(NbtCompound tag, CallbackInfo info) {
 		tag.putInt(TAG_KEY, goal.getTimeUntilNextFeather());
 	}
 
-	@Inject(at = @At("TAIL"), method = "readCustomDataFromTag")
-	private void readCustomDataFromTag(CompoundTag tag, CallbackInfo info) {
+	@Inject(at = @At("TAIL"), method = "readCustomDataFromNbt")
+	private void readCustomDataFromTag(NbtCompound tag, CallbackInfo info) {
 		if (tag.contains(TAG_KEY)) {
 			goal.setTimeUntilNextFeather(tag.getInt(TAG_KEY));
 		}
