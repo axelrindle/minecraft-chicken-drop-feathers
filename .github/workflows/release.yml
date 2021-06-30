@@ -28,3 +28,5 @@ jobs:
     - name: Publish to Modrinth
       run: ./gradlew publishToModrinth
       working-directory: ./fabric
+      env:
+        MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
