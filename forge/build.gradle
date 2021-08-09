@@ -1,11 +1,10 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        jcenter()
+        maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 
@@ -16,15 +15,14 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
 def modId = 'chickendropfeathersmod'
-def mappingsVersion = '20201028-1.16.3'
-def forgeVersion = '1.16.5-36.0.0'
+def mappingsVersion = '1.17.1'
+def forgeVersion = '1.17.1-37.0.0'
 
 version = '1.0'
 group = "de.axelrindle.${modId}"
 archivesBaseName = "ChickenDropFeathers"
 
-// Need this here so eclipse task generates correctly.
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 //region Replace tokens
 
@@ -43,17 +41,7 @@ task generateSources(type: Copy) {
     filter(ReplaceTokens, tokens: replaceTokens)
 }
 
-sourceSets {
-    // This source set will contain all sources that we filter
-    generated {
-        java {
-            srcDirs = [generatedSrcDir]
-        }
-    }
-}
-
-compileJava.source = sourceSets.generated.java
-compileJava.dependsOn generateSources
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 processResources {
     from('src/main/resources') {
@@ -71,7 +59,7 @@ minecraft {
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
     //mappings channel: 'snapshot', version: '20171003-1.12'
-    mappings channel: 'snapshot', version: mappingsVersion
+    mappings channel: 'official', version: mappingsVersion
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -90,6 +78,8 @@ minecraft {
         }
 
         server {
+            workingDirectory project.file('run')
+
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
 
