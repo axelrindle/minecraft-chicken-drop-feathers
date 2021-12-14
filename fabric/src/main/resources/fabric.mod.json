@@ -19,7 +19,7 @@
     "issues": "https://github.com/axelrindle/minecraft-chicken-drop-feathers/issues"
   },
 
-  "license": "AGPLv3",
+  "license": "LGPLv3",
   "icon": "assets/chickendropfeathersmod/icon.png",
 
   "environment": "*",
