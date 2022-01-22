@@ -1,9 +1,9 @@
 package de.axelrindle.chickendropfeathersmod;
 
-import net.minecraft.entity.ai.goal.Goal;
-import net.minecraft.entity.passive.ChickenEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.animal.Chicken;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -12,20 +12,20 @@ public class EntityGoalDropFeather extends Goal {
     private final ThreadLocalRandom random = ThreadLocalRandom.current();
 
     private final int baseTicks = 12000;
-    private final ChickenEntity chicken;
+    private final Chicken chicken;
     private int timeUntilNextFeather = getNewTime();
 
-    public EntityGoalDropFeather(ChickenEntity chicken) {
+    public EntityGoalDropFeather(Chicken chicken) {
         this.chicken = chicken;
     }
 
     @Override
-    public boolean shouldExecute() {
-        return !chicken.isChild() && !chicken.isChickenJockey();
+    public boolean canUse() {
+        return !chicken.isBaby() && !chicken.isChickenJockey();
     }
 
     @Override
-    public void resetTask() {
+    public void stop() {
         timeUntilNextFeather = getNewTime();
     }
 
@@ -34,7 +34,7 @@ public class EntityGoalDropFeather extends Goal {
         timeUntilNextFeather--;
         if (timeUntilNextFeather <= 0) {
             dropFeather();
-            resetTask();
+            stop();
         }
     }
 
@@ -58,6 +58,6 @@ public class EntityGoalDropFeather extends Goal {
     }
 
     private void dropFeather() {
-        chicken.entityDropItem(new ItemStack(Items.FEATHER, getFeatherAmount()));
+        chicken.spawnAtLocation(new ItemStack(Items.FEATHER, getFeatherAmount()));
     }
 }
