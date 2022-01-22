@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "de.axelrindle.chickendropfeathersmod.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "refmap": "modid.refmap.json",
+  "mixins": [
+    "EntityChickenMixin"
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}

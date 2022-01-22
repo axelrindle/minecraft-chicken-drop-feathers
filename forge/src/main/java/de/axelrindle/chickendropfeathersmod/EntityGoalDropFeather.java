@@ -11,7 +11,7 @@ public class EntityGoalDropFeather extends Goal {
 
     private final ThreadLocalRandom random = ThreadLocalRandom.current();
 
-    private final int baseTicks = 12000;
+    private final int baseTicks = 12;
     private final Chicken chicken;
     private int timeUntilNextFeather = getNewTime();
 
@@ -36,6 +36,14 @@ public class EntityGoalDropFeather extends Goal {
             dropFeather();
             stop();
         }
+    }
+
+    public int getTimeUntilNextFeather() {
+        return timeUntilNextFeather;
+    }
+
+    public void setTimeUntilNextFeather(int timeUntilNextFeather) {
+        this.timeUntilNextFeather = timeUntilNextFeather;
     }
 
     /**
