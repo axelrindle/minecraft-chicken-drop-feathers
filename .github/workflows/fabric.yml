@@ -3,8 +3,12 @@ name: Fabric
 on:
   push:
     branches: [ main ]
+    paths:
+    - 'fabric/**/*'
   pull_request:
     branches: [ main ]
+    paths:
+    - 'fabric/**/*'
 
 jobs:
   build:
