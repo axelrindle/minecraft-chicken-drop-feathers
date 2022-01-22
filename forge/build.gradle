@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 
 def modId = 'chickendropfeathersmod'
 def mappingsVersion = '1.17.1'
-def forgeVersion = '1.17.1-37.0.0'
+def forgeVersion = '1.17.1-37.1.1'
 
 version = '1.0'
 group = "de.axelrindle.${modId}"
