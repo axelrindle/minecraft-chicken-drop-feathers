@@ -9,6 +9,8 @@ buildscript {
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
+import org.gradle.api.file.DuplicatesStrategy
+import org.gradle.api.tasks.Copy
 
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -26,6 +28,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 //region Replace tokens
 
+def generatedSrcDir = "$buildDir/generated/java"
 def replaceTokens = [
         NAME: archivesBaseName,
         MODID: modId,
@@ -33,21 +36,26 @@ def replaceTokens = [
         DESCRIPTION: 'Chicken will drop feathers from time to time.',
         PROJECT_URL: 'https://www.curseforge.com/minecraft/mc-mods/chicken-drop-feathers'
 ]
-def generatedSrcDir = "$buildDir/generated-src"
 
-task generateSources(type: Copy) {
-    from 'src/main/java'
-    into generatedSrcDir
+sourceSets {
+    generated {
+        java {
+            srcDir(generatedSrcDir)
+        }
+    }
+}
+
+task processSources(type: Copy) {
+    from sourceSets.main.java
+    into "$generatedSrcDir"
     filter(ReplaceTokens, tokens: replaceTokens)
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+compileJava.source = sourceSets.generated.java
+compileJava.dependsOn processSources
 
 processResources {
-    from('src/main/resources') {
-        exclude("logo.png")
-        filter(ReplaceTokens, tokens: replaceTokens)
-    }
+    filter(ReplaceTokens, tokens: replaceTokens)
 }
 
 //endregion
