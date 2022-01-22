@@ -1,0 +1,38 @@
+name: Forge
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'forge/**/*'
+  pull_request:
+    branches: [ main ]
+    paths:
+    - 'forge/**/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        download_url="https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.1%2B12/OpenJDK17U-jdk_x64_linux_hotspot_17.0.1_12.tar.gz"
+        wget -O $RUNNER_TEMP/java_package.tar.gz $download_url
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'jdkfile'
+        jdkFile: ${{ runner.temp }}/java_package.tar.gz
+        java-version: '17'
+        architecture: x64
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      working-directory: ./forge
+    - name: Build with Gradle
+      run: ./gradlew build
+      working-directory: ./forge
+    - name: capture build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Forge Artifacts
+        path: forge/build/libs/
