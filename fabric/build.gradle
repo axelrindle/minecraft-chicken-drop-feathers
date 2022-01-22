@@ -48,7 +48,9 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
+}
 
+remapJar {
 	archiveName "${archivesBaseName}-${project.version}-fabric-${fabric_version}.jar"
 }
 
