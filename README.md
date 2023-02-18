@@ -1,8 +1,8 @@
 ![banner](banner.svg)
 
-[![supported minecraft versions](http://cf.way2muchnoise.eu/versions/300374.svg)](https://www.curseforge.com/minecraft/mc-mods/chicken-drop-feathers)
-[![Fabric](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/fabric.yml/badge.svg)](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/fabric.yml)
-[![Forge](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/forge.yml/badge.svg)](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/forge.yml)
+[![CI](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/ci.yml/badge.svg)](https://github.com/axelrindle/minecraft-chicken-drop-feathers/actions/workflows/ci.yml)
+[![CurseForge](https://img.shields.io/badge/CurseForge-Download-f16436?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/chicken-drop-feathers)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-1bd96a?logo=modrinth)](https://modrinth.com/mod/chicken-drop-feathers)
 
 # minecraft-chicken-drop-feathers
 
