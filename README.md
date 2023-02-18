@@ -6,7 +6,27 @@
 
 # minecraft-chicken-drop-feathers
 
-> Chicken will drop feathers from time to time.
+> Adult chicken will drop 0 - 2 feathers from time to time.
+
+Usually I play Minecraft without mods, but one thing that I was always frustrated
+about is the fact that I have to kill Chicken in order to get some feathers.
+This is the reason I created this mod.
+
+If you want to request this mod to be available for another Forge/Minecraft version,
+please open an issue on GitHub and specify the required version.
+
+You can query the remaining amount of ticks until the next feather drop using the
+following command:
+
+```
+/data get entity @e[type=minecraft:chicken,distance=..5,limit=1] FeatherDropTime
+```
+
+## FAQs
+
+### May I use this in my modpack?
+
+**Yes.** Just link back to this page.
 
 ## Special thanks
 
