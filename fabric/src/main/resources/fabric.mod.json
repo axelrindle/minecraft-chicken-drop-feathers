@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "chickendropfeathers",
+  "id": "chickendropfeathersmod",
   "version": "${version}",
 
   "name": "Chicken Drop Feathers",
@@ -23,14 +23,17 @@
   "icon": "assets/chickendropfeathersmod/icon.png",
 
   "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.axelrindle.chickendropfeathersmod.fabric.CDFModFabric"
+    ]
+  },
   "mixins": [
-    "chickendropfeathersmod.mixins.json"
+    "chickendropfeathersmod-common.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.18.x",
-    "java": ">=17"
+    "minecraft": ">=1.19.2",
+    "architectury": ">=6.2.43"
   }
 }

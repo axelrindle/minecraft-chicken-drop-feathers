@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "mixin": [
+    "chickendropfeathersmod-common.mixins.json"
+  ],
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "chickendropfeathersmod",
+    "version": "${version}",
+
+    "name": "Chicken Drop Feathers",
+    "description": "Chicken will drop feathers from time to time.",
+    "authors": [
+      "lalo5"
+    ],
+    "contributors": [
+      {
+        "name": "d4rkm0nkey"
+      }
+    ],
+    "contact": {
+      "homepage": "https://www.curseforge.com/minecraft/mc-mods/chicken-drop-feathers",
+      "sources": "https://github.com/axelrindle/minecraft-chicken-drop-feathers",
+      "issues": "https://github.com/axelrindle/minecraft-chicken-drop-feathers/issues"
+    },
+
+    "license": "LGPLv3",
+    "icon": "assets/chickendropfeathersmod/icon.png",
+
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "environment": "*",
+    "entrypoints": {
+      "init": [
+        "de.axelrindle.chickendropfeathersmod.quilt.CDFModQuilt"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": "*"
+      },
+      {
+        "id": "quilt_base",
+        "version": "*"
+      },
+      {
+        "id": "minecraft",
+        "version": ">=1.19.2"
+      },
+      {
+        "id": "architectury",
+        "version": ">=6.2.43"
+      }
+    ]
+  }
+}
