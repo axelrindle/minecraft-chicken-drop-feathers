@@ -22,6 +22,10 @@ following command:
 /data get entity @e[type=minecraft:chicken,distance=..5,limit=1] FeatherDropTime
 ```
 
+## Required Dependencies
+
+- [Architectury Api](https://modrinth.com/mod/architectury-api)
+
 ## FAQs
 
 ### May I use this in my modpack?
